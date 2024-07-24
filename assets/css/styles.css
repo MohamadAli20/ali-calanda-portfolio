@@ -22,6 +22,11 @@ body, nav div{
         padding: 0 50px;
     }
 }
+@media screen and (max-width: 993px){
+    .navbar-nav{
+        /* Insert here */
+    }
+}
 .navbar-toggler{
     box-shadow: none !important;
     border: none;
@@ -35,13 +40,32 @@ body, nav div{
     height: 91vh;
     position: relative;
 }
+#home .ali-profile{
+    display: none;
+}
+.home-text{
+    font-size: 3rem;
+}
+@media screen and (min-width: 992px){
     #home .ali-profile{
         width: 43.3%;
         position: absolute;
         top: 0;
         right: 200px;
         z-index: -1;
+        display: block;
     }
+    .home-text{
+        /* position: absolute; */
+        padding-top: 150px;
+        padding-left: 250px;
+    }
+}
+@media screen and (max-width: 993px){
+    .home-text{
+        padding: 0 50px;
+    }
+}
 #home div{
     color: var(--secondary-color);
 }
@@ -58,12 +82,7 @@ body, nav div{
         text-decoration: none;
         color: var(--accent-color);
     }
-.home-text{
-    /* position: absolute; */
-    font-size: 3rem;
-    padding-top: 150px;
-    padding-left: 250px;
-}
+
 .icon-container{
     text-align: left;
     margin-top: 15px;
