@@ -43,9 +43,6 @@ body, nav div{
 #home .ali-profile{
     display: none;
 }
-.home-text{
-    font-size: 3rem;
-}
 @media screen and (min-width: 992px){
     #home .ali-profile{
         width: 43.3%;
@@ -54,16 +51,19 @@ body, nav div{
         right: 200px;
         z-index: -1;
         display: block;
+
     }
     .home-text{
         /* position: absolute; */
         padding-top: 150px;
         padding-left: 250px;
+        font-size: 3rem;
     }
 }
 @media screen and (max-width: 993px){
     .home-text{
         padding: 0 50px;
+        font-size: 2rem;
     }
 }
 #home div{
