@@ -1,0 +1,77 @@
+:root{
+    --primary-color: #424242;
+    --secondary-color: #DEF2F2;
+    --accent-color: #C76E00;
+}
+body, nav div{
+    background-color: var(--primary-color);
+    font-weight: bold;
+}
+.navbar-brand, .nav-link{
+    color: var(--secondary-color);
+}
+.active{
+    color: var(--accent-color) !important;
+}
+@media screen and (min-width: 992px){
+    .navbar-collapse{
+        display: flex;
+        justify-content: end;
+    }
+    .nav-item{
+        padding: 0 50px;
+    }
+}
+.navbar-toggler{
+    box-shadow: none !important;
+    border: none;
+}
+.navbar-brand:hover,
+.nav-item a:hover{
+    color: var(--accent-color);
+}
+/* main */
+#home{
+    height: 91vh;
+    position: relative;
+}
+    #home .ali-profile{
+        width: 43.3%;
+        position: absolute;
+        top: 0;
+        right: 200px;
+        z-index: -1;
+    }
+#home div{
+    color: var(--secondary-color);
+}
+#name{
+    color: var(--accent-color);
+}
+#home div button{
+    border: 1px solid var(--accent-color);
+    border-radius: 0;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+    #home div button a{
+        text-decoration: none;
+        color: var(--accent-color);
+    }
+.home-text{
+    /* position: absolute; */
+    font-size: 3rem;
+    padding-top: 150px;
+    padding-left: 250px;
+}
+.icon-container{
+    text-align: left;
+    margin-top: 15px;
+}
+.icon-container img{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    vertical-align: top;
+    cursor: pointer;
+}
