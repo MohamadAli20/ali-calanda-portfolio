@@ -82,7 +82,13 @@ body, nav div{
 #name{
     color: var(--accent-color);
 }
-#home div button{
+.btn-hire-me{
+    background-color: var(--accent-color);
+    border-radius: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+.btn-download-cv{
     border: 1px solid var(--accent-color);
     border-radius: 0;
     color: var(--accent-color);
