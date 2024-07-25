@@ -1,21 +1,20 @@
 :root{
-    --primary-color: #424242;
-    --secondary-color: #DEF2F2;
-    --accent-color: #C76E00;
+    --primary-color: #413620;
+    --secondary-color: #9C6615;
+    --tertiary-color: #CDD1DE;
+    --accent-color: #FFD791;
 }
 body, nav div{
     background-color: var(--primary-color);
     font-weight: bold;
 }
 .navbar-brand, .nav-link{
-    color: var(--secondary-color);
+    color: var(--tertiary-color);
 }
 .active{
     color: var(--accent-color) !important;
 }
 @media screen and (min-width: 992px){
-    .navbar{
-    }
     .navbar-collapse{
         display: flex;
         justify-content: end;
@@ -79,7 +78,7 @@ body, nav div{
     }
 }
 #home div{
-    color: var(--secondary-color);
+    color: var(--tertiary-color);
 }
 #name{
     color: var(--accent-color);
@@ -92,7 +91,7 @@ body, nav div{
     font-weight: bold;
 }
 .btn-download-cv{
-    border: 1px solid var(--accent-color) !important;
+    border: 2px solid var(--accent-color) !important;
     border-radius: 0;
     color: var(--accent-color);
     font-weight: bold;

@@ -14,12 +14,12 @@ $(document).ready(function(){
     // When download cv is hover over, the style will change
     $(".btn-download-cv").hover(
         function(){
-            $(".btn-download-cv").css("background-color", "#C76E00");
-            $(".btn-download-cv a").css("color", "#424242");
+            $(".btn-download-cv").css("background-color", "var(--accent-color)");
+            $(".btn-download-cv a").css("color", "var(--primary-color)");
         },
         function(){
-            $(".btn-download-cv").css("background-color", "#424242");
-            $(".btn-download-cv a").css("color", "#C76E00");
+            $(".btn-download-cv").css("background-color", "var(--primary-color)");
+            $(".btn-download-cv a").css("color", "var(--accent-color)");
         }
     )
 })
