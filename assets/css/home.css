@@ -23,11 +23,6 @@ body, nav div{
         padding: 0 50px;
     }
 }
-@media screen and (max-width: 993px){
-    .navbar-nav{
-        /* Insert here */
-    }
-}
 .navbar-toggler{
     box-shadow: none !important;
     border: none;
@@ -41,9 +36,6 @@ body, nav div{
     height: 80vh;
     position: relative;
     /* border: 1px solid white; */
-}
-#home .ali-profile{
-    /* display: none; */
 }
 @media screen and (min-width: 992px){
     #home .ali-profile{
