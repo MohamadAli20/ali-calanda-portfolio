@@ -1,3 +1,4 @@
+alert("Development in progress")
 $(document).ready(function(){
     let isToggle = false;
     $(".navbar-toggler").click(function(){
