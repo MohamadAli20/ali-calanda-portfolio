@@ -34,6 +34,9 @@
         .image-col{
             display: none;
         }
+        .about-content{
+            width: 100%;
+        }
     }
 .about-text{
     padding: 0 20px;
