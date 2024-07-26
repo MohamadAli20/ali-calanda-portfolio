@@ -1,4 +1,5 @@
 #about{
+    position: relative;
     background-color: var(--secondary-color);
     height: 100vh;
     text-align: center;

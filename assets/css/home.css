@@ -8,6 +8,13 @@ body, nav div{
     background-color: var(--primary-color);
     font-weight: bold;
 }
+nav{
+    position: fixed !important;
+    top: 0;
+    z-index: 5;
+    width: 100%;
+    background-color: #9C6615 !important;
+}
 .navbar-brand, .nav-link{
     color: var(--tertiary-color);
 }
@@ -35,13 +42,15 @@ body, nav div{
 #home{
     height: 100vh;
     position: relative;
-    /* border: 1px solid transparent !important; */
+    top: 0;
+    border: 1px solid transparent !important;
 }
 @media screen and (min-width: 992px){
     #home .ali-profile{
         width: 650px;
         position: absolute;
-        top: -120px !important;
+        /* top: -120px !important; */
+        bottom: 0;
         right: 10%;
         z-index: -1;
 
