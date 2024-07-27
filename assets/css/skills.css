@@ -19,5 +19,9 @@
         background-color: var(--tertiary-color);
     }
     .figma-icon{
-        border: 1px solid black;
+        height: 100%;
     }
+        .figma-icon img{
+            /* height: 80%; */
+            width: 65%;
+        }
