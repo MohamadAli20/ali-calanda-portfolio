@@ -35,7 +35,10 @@ $(document).ready(function(){
     });
     // Change the active link based on the value of scroll top
     function updateNavLink() {
-        let scrollTop = $(window).scrollTop();
+        let scrollTop;
+        setInterval(function(){
+            scrollTop = $(window).scrollTop();
+        }, 1000);
     
         if (scrollTop <= 328) {
             $(".nav-link").attr("class", "nav-link");
