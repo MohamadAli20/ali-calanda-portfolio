@@ -1,3 +1,23 @@
 #skills{
+    padding-top: 80px;
     height: 100vh;
+    text-align: center;
+    position: relative;
 }
+    #skills h1{
+        color: var(--accent-color);
+        padding: 10px 0;
+    }
+    #skills p{
+        font-weight:500;
+        color: var(--tertiary-color);
+        padding: 10px 0;
+    }
+    .skill-list div figure{
+        border-radius: 10px;
+        overflow: hidden;
+        background-color: var(--tertiary-color);
+    }
+    .figma-icon{
+        border: 1px solid black;
+    }
