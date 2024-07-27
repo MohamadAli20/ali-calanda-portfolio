@@ -24,32 +24,37 @@ $(document).ready(function(){
             $(".navbar-toggler").click();
         })
     }
-    // Change the color of selected link
+    // Change the style of the selected link to active
     $(".nav-link").click(function(){
         $(".nav-link").attr("class", "nav-link")
         $(this).attr("class", "nav-link active");
         
-        // use this to check the scroll top of each link
-        setTimeout(function(){
-            var scrollTop = $(window).scrollTop();
-            // alert(scrollTop)
-        }, 3000);
-    })
-    $('body').on('wheel', function(event) {
-        // Get the current scroll position
-        var scrollTop = $(window).scrollTop();
-        console.log(scrollTop)
-        if(scrollTop <= 328){
-            $(".nav-link").attr("class", "nav-link")
+        // setTimeout(function(){
+        //     var scrollTop = $(window).scrollTop();
+        // }, 3000);
+    });
+    // Change the active link based on the value of scroll top
+    function updateNavLink() {
+        let scrollTop = $(window).scrollTop();
+    
+        if (scrollTop <= 328) {
+            $(".nav-link").attr("class", "nav-link");
             $("#home-link").attr("class", "nav-link active");
-        }
-        else if(scrollTop >= 329){
-            $(".nav-link").attr("class", "nav-link")
+        } else if (scrollTop >= 329) {
+            $(".nav-link").attr("class", "nav-link");
             $("#about-link").attr("class", "nav-link active");
         }
-        // I just wan to insert a code here that can detect what is the height are we now to determine what page should we focus on
+    }
+    $('body').on('wheel', function(event) {
+        updateNavLink();
         event.preventDefault();
     });
+    
+    $('body').on('touchmove', function(event) {
+        event.preventDefault();
+        updateNavLink();
+    });
+    
 
     // When download cv is hover over, the style will change
     $(".btn-download-cv").hover(
