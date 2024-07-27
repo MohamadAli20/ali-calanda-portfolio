@@ -1,6 +1,5 @@
 #about{
     position: relative;
-    background-color: var(--secondary-color);
     height: 100vh;
     text-align: center;
 }
@@ -25,10 +24,10 @@
         text-align: justify;
     }
     .about-text h1{
-        color: var(--tertiary-color);
+        color: var(--accent-color);
     }
     .about-text p{
-        color: var(--primary-color);
+        color: var(--tertiary-color);
     }
     @media screen and (max-width: 991px){
         .image-col{
@@ -45,7 +44,7 @@
     font-weight:500;
 }
 .about-text p span{
-    color: var(--tertiary-color);
+    color: var(--accent-color);
     width: 500px !important;
     border: 1px solid white;
 }
@@ -54,7 +53,8 @@
     overflow-wrap: break-word;
     margin: 5px 0;
     text-align: left;
+    color: var(--tertiary-color);
 }
 .label-about{
-    color: var(--tertiary-color);
+    color: var(--accent-color) !important;
 }

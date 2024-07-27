@@ -44,21 +44,27 @@ nav{
     position: relative;
     top: 0;
     border: 1px solid transparent !important;
+    text-align: center;
+}
+#home .row{
+    margin: 0 auto;
 }
 @media screen and (min-width: 992px){
-    #home .ali-profile{
-        width: 650px;
-        position: absolute;
-        /* top: -120px !important; */
-        bottom: 0;
-        right: 10%;
-        z-index: -1;
-
+    .profile-wrapper, .home-text{
+        /* display: inline-block;
+        vertical-align: middle; */
+        margin-top: 100px;
+    }
+    .profile-wrapper{
+        width: 500px;
+        background-color: var(--accent-color);
+        border-radius: 100%;
+        overflow: hidden;
     }
     .home-text{
-        margin-top: 10%;
-        margin-left: 10%;
         font-size: 3rem;
+        text-align: left;
+        padding-top: 90px;
     }
 }
 @media screen and (max-width: 991px){
@@ -66,7 +72,7 @@ nav{
         display: flex;
         align-items: center;
     }
-    #home .ali-profile{
+    .profile-wrapper{
         display: none;
     }
     .home-text{

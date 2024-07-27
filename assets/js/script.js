@@ -29,9 +29,11 @@ $(document).ready(function(){
         $(".nav-link").attr("class", "nav-link")
         $(this).attr("class", "nav-link active");
         
+        let scrollTop;
         // setTimeout(function(){
-        //     var scrollTop = $(window).scrollTop();
-        // }, 3000);
+            scrollTop = $(window).scrollTop();
+        // }, 1000);
+        // alert(scrollTop);
     });
     
     // Change the active link based on the value of scroll top
@@ -41,9 +43,14 @@ $(document).ready(function(){
         if (scrollTop <= 328) {
             $(".nav-link").attr("class", "nav-link");
             $("#home-link").attr("class", "nav-link active");
-        } else if (scrollTop >= 329) {
+        }
+        else if (scrollTop >= 329 && scrollTop <= 986) {
             $(".nav-link").attr("class", "nav-link");
             $("#about-link").attr("class", "nav-link active");
+        }
+        else if (scrollTop >= 987) {
+            $(".nav-link").attr("class", "nav-link");
+            $("#skills-link").attr("class", "nav-link active");
         }
     }
     setInterval(function(){
