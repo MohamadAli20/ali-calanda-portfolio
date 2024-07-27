@@ -45,16 +45,19 @@ $(document).ready(function(){
             $("#about-link").attr("class", "nav-link active");
         }
     }
-    $('body').on('wheel', function(event) {
-        updateNavLink();
-        event.preventDefault();
-    });
-    
-    $('body').on('touchmove', function(event) {
-        event.preventDefault();
-        updateNavLink();
-    });
-    
+    // Scroll behavior for desktop screen size and touch for mobile devices
+    if(innerWidth <= 991){
+        $('body').on('touchmove', function(event) {
+            updateNavLink();
+            event.preventDefault();
+        });
+    }
+    else if(innerWidth >= 992){
+        $('body').on('wheel', function(event) {
+            updateNavLink();
+            event.preventDefault();
+        });
+    }
 
     // When download cv is hover over, the style will change
     $(".btn-download-cv").hover(
