@@ -33,13 +33,11 @@ $(document).ready(function(){
         //     var scrollTop = $(window).scrollTop();
         // }, 3000);
     });
+    
     // Change the active link based on the value of scroll top
     function updateNavLink() {
-        let scrollTop;
-        setInterval(function(){
-            scrollTop = $(window).scrollTop();
-        }, 1000);
-    
+        let scrollTop = $(window).scrollTop();
+
         if (scrollTop <= 328) {
             $(".nav-link").attr("class", "nav-link");
             $("#home-link").attr("class", "nav-link active");
@@ -48,6 +46,9 @@ $(document).ready(function(){
             $("#about-link").attr("class", "nav-link active");
         }
     }
+    setInterval(function(){
+        updateNavLink();
+    }, 500);
     // Scroll behavior for desktop screen size and touch for mobile devices
     if(innerWidth <= 991){
         $('body').on('touchmove', function(event) {
