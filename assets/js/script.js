@@ -48,9 +48,13 @@ $(document).ready(function(){
             $(".nav-link").attr("class", "nav-link");
             $("#about-link").attr("class", "nav-link active");
         }
-        else if (scrollTop >= 987) {
+        else if (scrollTop >= 987 && scrollTop <= 1316) {
             $(".nav-link").attr("class", "nav-link");
             $("#skills-link").attr("class", "nav-link active");
+        }
+        else if (scrollTop >= 1317 ) {
+            $(".nav-link").attr("class", "nav-link");
+            $("#projects-link").attr("class", "nav-link active");
         }
     }
     setInterval(function(){

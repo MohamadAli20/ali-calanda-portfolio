@@ -3,6 +3,9 @@
     height: 100vh;
     text-align: center;
     position: relative;
+    content: "";
+    display: table;
+    clear: both;
 }
     #skills h1{
         color: var(--accent-color);
