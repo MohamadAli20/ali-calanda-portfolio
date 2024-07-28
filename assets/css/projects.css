@@ -20,7 +20,7 @@
         .card-project img{
             /* margin: 20px; */
             width: 100%;
-            padding: 20px;
+            padding: 0px;
         }
         .card-project figcaption{
             color: var(--primary-color);
@@ -28,7 +28,7 @@
         .card-project figcaption span{
             font-weight: bold;
         }
-        .card-project a{
+        .card-project .btn-check-out{
             display: block;
             border-radius: 0;
             margin: 0 auto;
