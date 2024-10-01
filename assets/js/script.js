@@ -1,6 +1,7 @@
 // alert("Development in progress");
 $(document).ready(function(){
-
+    
+    // if menu icon is clicked change it to the close icon vice versa
     let isToggle = false;
     $(".navbar-toggler").click(function(){
         if(!isToggle){
@@ -29,9 +30,10 @@ $(document).ready(function(){
         $(".nav-link").attr("class", "nav-link")
         $(this).attr("class", "nav-link active");
         
-        let scrollTop;
+        // For debugging
+        // let scrollTop;
         // setTimeout(function(){
-            scrollTop = $(window).scrollTop();
+            // scrollTop = $(window).scrollTop();
         // }, 1000);
         // alert(scrollTop);
     });
@@ -57,9 +59,12 @@ $(document).ready(function(){
             $("#projects-link").attr("class", "nav-link active");
         }
     }
+
+    // Every 500 milliseconds check the value of scroll top to update the active link
     setInterval(function(){
         updateNavLink();
     }, 500);
+
     // Scroll behavior for desktop screen size and touch for mobile devices
     if(innerWidth <= 991){
         $('body').on('touchmove', function(event) {
