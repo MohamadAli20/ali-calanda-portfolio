@@ -92,7 +92,7 @@ $(document).ready(function(){
     )
 
     // Hover skill and show its label
-    $(".skill-list div figure").hover(
+    $(".skill-list div figure, .card-project").hover(
         function(){
             $(this).css({
                 "background-color": "var(--tertiary-color)",
@@ -103,6 +103,17 @@ $(document).ready(function(){
         },
         function(){
             $(this).css("box-shadow", "none")
+        }
+    )
+
+    $(".btn-check-out").hover(
+        function(){
+            $(this).css("background-color", "var(--accent-color)")
+            $(this).css("color", "var(--primary-color)")
+        },
+        function(){
+            $(this).css("background-color", "var(--primary-color)")
+            $(this).css("color", "var(--accent-color)")
         }
     )
 })
