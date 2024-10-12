@@ -90,4 +90,19 @@ $(document).ready(function(){
             $(".btn-download-cv a").css("color", "var(--accent-color)");
         }
     )
+
+    // Hover skill and show its label
+    $(".skill-list div figure").hover(
+        function(){
+            $(this).css({
+                "background-color": "var(--tertiary-color)",
+                "-webkit-box-shadow": "-1px 0px 5px 1px rgba(0,0,0,0.75)",
+                "-moz-box-shadow": "-1px 0px 5px 1px rgba(0,0,0,0.75)",
+                "box-shadow": "-1px 0px 5px 1px rgba(0,0,0,0.75)"
+            });
+        },
+        function(){
+            $(this).css("box-shadow", "none")
+        }
+    )
 })
