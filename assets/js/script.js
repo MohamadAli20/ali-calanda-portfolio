@@ -110,10 +110,28 @@ $(document).ready(function(){
         function(){
             $(this).css("background-color", "var(--accent-color)")
             $(this).css("color", "var(--primary-color)")
+            $(this).siblings(".btn-view-code").css("background-color", "var(--primary-color)")
+            $(this).siblings(".btn-view-code").css("color", "var(--accent-color)")
         },
         function(){
             $(this).css("background-color", "var(--primary-color)")
             $(this).css("color", "var(--accent-color)")
+            $(this).siblings(".btn-view-code").css("background-color", "var(--accent-color)")
+            $(this).siblings(".btn-view-code").css("color", "var(--primary-color)")
+        }
+    )
+    $(".btn-view-code").hover(
+        function(){
+            $(this).css("background-color", "var(--primary-color)")
+            $(this).css("color", "var(--accent-color)")
+            $(this).siblings().css("background-color", "var(--accent-color)")
+            $(this).siblings().css("color", "var(--primary-color)")
+        },
+        function(){
+            $(this).css("background-color", "var(--accent-color)")
+            $(this).css("color", "var(--primary-color)")
+            $(this).siblings().css("background-color", "var(--primary-color)")
+            $(this).siblings().css("color", "var(--accent-color)")
         }
     )
 })
