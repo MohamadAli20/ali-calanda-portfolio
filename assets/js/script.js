@@ -135,11 +135,8 @@ $(document).ready(function(){
         }
     )
 
-    // const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
-    // const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
-
+    // For popover in the skill section 
     const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
-
     popoverTriggerList.forEach((popoverTriggerEl) => {
         new bootstrap.Popover(popoverTriggerEl, {
             trigger: 'hover', // Set the trigger to hover

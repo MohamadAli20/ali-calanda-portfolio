@@ -76,7 +76,7 @@ nav{
         display: none;
     }
     .home-text{
-        font-size: 3rem;
+        font-size: 2rem;
         text-align: center;
         margin: 0 auto;
     }
@@ -86,6 +86,9 @@ nav{
     }
     .icon-container{
         display: inline-block;
+    }
+    h1{
+        font-size: 2rem;
     }
 }
 #home div{
