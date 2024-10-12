@@ -134,4 +134,16 @@ $(document).ready(function(){
             $(this).siblings().css("color", "var(--accent-color)")
         }
     )
+
+    // const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+    // const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+
+    const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+
+    popoverTriggerList.forEach((popoverTriggerEl) => {
+        new bootstrap.Popover(popoverTriggerEl, {
+            trigger: 'hover', // Set the trigger to hover
+        });
+    });
+
 })

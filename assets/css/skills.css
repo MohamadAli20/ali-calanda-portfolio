@@ -17,6 +17,9 @@
         color: var(--tertiary-color);
         padding: 10px 0;
     }
+    .skill-list{
+        font-size: 10px;
+    }
     .skill-list div figure{
         border-radius: 10px;
         overflow: hidden;
@@ -29,3 +32,13 @@
             /* height: 80%; */
             width: 65%;
         }
+        .custom-popover {
+            background-color: var(--tertiary-color);
+            /* border: ; */
+            color: #000;
+        }
+        .custom-popover .popover-header {
+            background-color: var(--tertiary-color);
+            color: #000;
+        }
+        
