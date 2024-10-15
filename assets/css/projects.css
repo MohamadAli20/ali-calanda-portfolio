@@ -2,6 +2,9 @@
     padding-top: 70px;
     height: 100vh;
     position: relative !important;
+    content: "";
+    display: table;
+    clear: both;
 }
     #projects h1{
         color: var(--accent-color);

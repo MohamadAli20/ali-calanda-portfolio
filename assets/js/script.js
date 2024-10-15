@@ -30,17 +30,19 @@ $(document).ready(function(){
         $(".nav-link").attr("class", "nav-link")
         $(this).attr("class", "nav-link active");
         
-        // For debugging
-        // let scrollTop;
-        // setTimeout(function(){
-            // scrollTop = $(window).scrollTop();
-        // }, 1000);
-        // alert(scrollTop);
     });
-    
+    // For debugging
+    // let scrollTop;
+    // setInterval(function(){
+    //     scrollTop = $(window).scrollTop();
+    //     console.log(scrollTop);
+    // }, 1000);
+
     // Change the active link based on the value of scroll top
     function updateNavLink() {
         let scrollTop = $(window).scrollTop();
+        // console.log(scrollTop);
+        // console.log(innerHeight);
 
         if (scrollTop <= 328) {
             $(".nav-link").attr("class", "nav-link");
@@ -54,9 +56,12 @@ $(document).ready(function(){
             $(".nav-link").attr("class", "nav-link");
             $("#skills-link").attr("class", "nav-link active");
         }
-        else if (scrollTop >= 1701 ) {
+        else if (scrollTop >= 1701 && scrollTop <= 2302) {
             $(".nav-link").attr("class", "nav-link");
             $("#projects-link").attr("class", "nav-link active");
+        }
+        else if (scrollTop >= 2302 ) {
+            $(".nav-link").attr("class", "nav-link");
         }
     }
 
@@ -142,5 +147,68 @@ $(document).ready(function(){
             trigger: 'hover', // Set the trigger to hover
         });
     });
+    function isValidEmail(email) {
+        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        return emailPattern.test(email);
+    }
+    function checkInputField(){
+        let result = [];
 
+        const name = document.getElementById("sender-name").value
+        const email = document.getElementById("email").value
+        const subject = document.getElementById("subject").value
+        const message = document.getElementById("message").value
+
+        if(name === "" && email === "" && subject === "" && message === ""){
+            result.push("Please fill out all required fields.");
+        }
+        else if(name === ""){
+            result.push("Please enter name.");
+        }
+        else if(email === ""){
+            result.push("Please enter valid email address.");
+        }
+        else if(subject === ""){
+            result.push("Please enter subject.");
+        }
+        else if(message === ""){
+            result.push("Please enter message.");
+        }
+        if(email && !isValidEmail(email)){
+            result.push("Invalid email.");
+        }
+        
+
+        return result;
+    }
+    function sendMail(){
+        let parms = {
+            name: document.getElementById("sender-name").value,
+            email: document.getElementById("email").value,
+            subject: document.getElementById("subject").value,
+            message: document.getElementById("message").value
+        }
+        emailjs.send("service_g9pfyuf", "template_xi804nc", parms)
+            .then($("#response-message").text("Email sent successfully!"))
+    }
+
+    $(".btn-send-email").click(function(){
+
+        let result = checkInputField();
+        if(result.length === 0){
+            sendMail();
+            $("form input").val("");
+            $("form textarea").val("");
+        }
+        else{
+            for(let i = 0; i < result.length; i++){
+                $("#response-message").append(result[i] + " ")
+            }
+            
+        }
+    })
+
+    setInterval(function(){
+        $("#response-message").text("")
+    }, 5000);
 })

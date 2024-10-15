@@ -21,7 +21,7 @@ nav{
 .active{
     color: var(--accent-color) !important;
 }
-@media screen and (min-width: 992px){
+/* @media screen and (min-width: 992px){
     .navbar-collapse{
         display: flex;
         justify-content: end;
@@ -29,7 +29,7 @@ nav{
     .nav-item{
         padding: 0 50px;
     }
-}
+} */
 .navbar-toggler{
     box-shadow: none !important;
     border: none;
@@ -50,6 +50,13 @@ nav{
     margin: 0 auto;
 }
 @media screen and (min-width: 992px){
+    .navbar-collapse{
+        display: flex;
+        justify-content: end;
+    }
+    .nav-item{
+        padding: 0 50px;
+    }
     .profile-wrapper, .home-text{
         /* display: inline-block;
         vertical-align: middle; */
@@ -68,6 +75,9 @@ nav{
     }
 }
 @media screen and (max-width: 991px){
+    #about, #skills, #projects{
+        text-align: justify;
+    }
     #home{
         display: flex;
         align-items: center;
