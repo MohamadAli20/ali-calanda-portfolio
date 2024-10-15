@@ -218,4 +218,22 @@ $(document).ready(function(){
             "color": "var(--primary-color)"
         })
     }, 5000);
+
+    $(".btn-send-email").hover(
+        function(){
+            $(this).css({
+                "background-color": "var(--primary-color)",
+                "color": "var(--accent-color)",
+                "border": "2px solid var(--accent-color)"
+            })
+        },
+        function(){
+            $(this).css({
+                "background-color": "var(--accent-color)",
+                "color": "var(--primary-color)",
+                "border": "2px solid var(--primary-color)"
+            })
+        }
+    )
+
 })

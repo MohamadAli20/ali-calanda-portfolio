@@ -49,12 +49,11 @@
     font-weight: 500;
     padding: 5px 0;
 }
-.btn-send-email:hover{
+/* .btn-send-email:hover{
     background-color: var(--primary-color);
     border: 2px solid var(--accent-color);
     color: var(--accent-color);
-    
-}
+} */
 #response-message{
     color: var(--accent-color);
     font-weight: lighter;
