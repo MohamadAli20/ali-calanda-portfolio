@@ -199,16 +199,19 @@ $(document).ready(function(){
             sendMail();
             $("form input").val("");
             $("form textarea").val("");
+            $(".btn-send-email").css({
+                "background-color": "var(--accent-color)",
+                "color": "var(--primary-color)"
+            })
         }
         else{
             for(let i = 0; i < result.length; i++){
                 $("#response-message").append(result[i] + " ")
             }
-            
         }
     })
 
     setInterval(function(){
-        $("#response-message").text("")
+        $("#response-message").text("");
     }, 5000);
 })
