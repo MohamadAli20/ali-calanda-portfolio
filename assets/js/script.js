@@ -199,10 +199,10 @@ $(document).ready(function(){
             sendMail();
             $("form input").val("");
             $("form textarea").val("");
-            $(".btn-send-email").css({
-                "background-color": "var(--accent-color)",
-                "color": "var(--primary-color)"
-            })
+            // $(".btn-send-email").css({
+            //     "background-color": "var(--accent-color)",
+            //     "color": "var(--primary-color)"
+            // })
         }
         else{
             for(let i = 0; i < result.length; i++){
@@ -213,5 +213,9 @@ $(document).ready(function(){
 
     setInterval(function(){
         $("#response-message").text("");
+        $(".btn-send-email").css({
+            "background-color": "var(--accent-color)",
+            "color": "var(--primary-color)"
+        })
     }, 5000);
 })
