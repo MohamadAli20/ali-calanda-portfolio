@@ -199,15 +199,20 @@ $(document).ready(function(){
             sendMail();
             $("form input").val("");
             $("form textarea").val("");
-            // $(".btn-send-email").css({
-            //     "background-color": "var(--accent-color)",
-            //     "color": "var(--primary-color)"
-            // })
         }
         else{
+            $("#response-message").empty();
             for(let i = 0; i < result.length; i++){
                 $("#response-message").append(result[i] + " ")
             }
+
+             // Add shake effect to the response message
+            $("#response-message").addClass('shake');
+
+            // Remove shake class after animation ends
+            $("#response-message").on('animationend', function() {
+                $(this).removeClass('shake');
+            });
         }
     })
 

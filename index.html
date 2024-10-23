@@ -20,6 +20,32 @@
             emailjs.init({
                 publicKey: "oy2wrJYrXDgmr9YMW",
             });
+
+            let messages = [
+                ["W", "e", "b", " ", "D", "e", "v", "e", "l", "o", "p", "e", "r"],
+                ["P", "r", "o", "g", "r", "a", "m", "m", "e", "r"],
+            ];
+
+            let messageIndex = 0;
+            let num = 0;
+
+            function typeMessage() {
+                num = 0;
+                let currentMessage = messages[messageIndex];
+                let interval = setInterval(function() {
+                    if (num < currentMessage.length) {
+                        $(".composing").append(currentMessage[num]);
+                        num++;
+                    } else {
+                        clearInterval(interval);
+                        $(".composing").empty();
+                        messageIndex = (messageIndex + 1) % messages.length;
+                        setTimeout(typeMessage, 1000);
+                    }
+                }, 200);
+            }
+
+            typeMessage();
         })();
     </script>
 </head>
@@ -51,7 +77,7 @@
     <div id="home" class="container">
         <div class="row">
             <div class="home-text col-lg-5 col-md-12 col-sm-12 col-12">
-                <p class="m-0">Hi, I am</br><span id="name">Ali Calanda</span></br>Web Developer</p>
+                <p class="m-0">Hi, I am</br><span id="name">Ali Calanda</span></br><span class="composing"></span></p>
                 <a href="#hire-me" class="btn btn-hire-me">Hire Me</a>
                 <button class="btn btn-download-cv"><a href="./assets/documents/MohamadAliCalanda.pdf" target="_blank">Download CV</a></button>
             </div>
