@@ -6,7 +6,9 @@
     clear: both;
 }
 .about-content{
+    /* border: 1px solid white; */
     padding-top: 80px;
+    margin-top: 10%;
 } 
 .image-container{
     width: 80%;
@@ -18,7 +20,7 @@
 }
     .image-container img{
         width: 500px;
-        margin-left: -65px;
+        margin-left: -45px;
     }
     .about-text h1{
         color: var(--accent-color);
